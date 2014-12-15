@@ -2,7 +2,7 @@
     'use strict';
 
     var oldElement = '_element',
-    newElement = 'element';
+        newElement = 'element';
 
     // Check if angular is defined
     if( angular === undefined || angular === null ) {
@@ -25,7 +25,7 @@
     // Copy 'angular.element' to 'angular._element'
     angular[oldElement] = angular[newElement];
 
-    // Replace 'angular.element' with a new function
+    // Replace 'angular.element' and '$' with a new function
     window.$ = angular[newElement] = function( selector ) {
 
         // The passed element is already an instance of 'angular._element'
@@ -61,7 +61,7 @@
 
     };
 
-    // Loop through 'angular._element' and copy all objects to 'angular.element' (i.e. _data and data functions)
+    // Loop through 'angular._element' and copy all objects to 'angular.element' and '$' (i.e. _data and data functions)
     for (var prop in angular[oldElement]) {
         if (angular[oldElement].hasOwnProperty(prop)) {
             window.$[prop] = angular[newElement][prop] = angular[oldElement][prop];
