@@ -1,0 +1,13 @@
+{
+  "name": "angular-sizzle-standalone",
+  "version": "0.1.0",
+  "homepage": "https://github.com/PabloDeGrote/angular-sizzle-standalone",
+  "authors": [],
+  "description": "Make AngularJS use Sizzle selector rather then jQLite",
+  "main": "angular-sizzle.js",
+  "devDependencies": {
+    "angular": "^1.3.6",
+    "sizzle": "^2.1.0"
+  },
+  "license": "MIT"
+}
