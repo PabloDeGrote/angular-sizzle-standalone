@@ -18,7 +18,7 @@
 
     // Check if Sizzle is defined
     if( !angular.isDefined(sizzle) ) {
-        console.error('Whoooops, Angular was not found, load angular-sizzle-standalone after loading Angular.js and Sizzle.js');
+        console.error('Whoooops, Sizzle was not found, load angular-sizzle-standalone after loading Angular.js and Sizzle.js');
         return;
     }
 
