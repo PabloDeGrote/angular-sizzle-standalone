@@ -64,8 +64,8 @@
 	// Loop through 'angular._element' and copy all objects to 'angular.element' (i.e. _data and data functions)
 	for (var prop in angular[oldElement]) {
 		if (angular[oldElement].hasOwnProperty(prop)) {
-			window.$ = angular[newElement][prop] = angular[oldElement][prop];
+			window.$[prop] = angular[newElement][prop] = angular[oldElement][prop];
 		}
 	}
 
-})(angular, Sizzle);
+})( window.angular, window.Sizzle, window.jQuery );
